@@ -1,0 +1,15 @@
+laplacian=[0 1 0;1 -4 1; 0 1 0];
+
+for file_no=[12 36 37 38]
+    filename='Data/glass'+string(file_no)+".hdf5";
+    cells=h5read(filename,'/data');
+    counts= size(cells);
+    count = counts(4);
+    processed_cells= zeros(80,80,1,count*8);
+    for cell_no=1:count
+      cell = cells(:,:,1,cell_no);
+      I2 = flipdim(I ,2);           %# horizontal flip
+I3 = flipdim(I ,1);           %# vertical flip
+I4 = flipdim(I3,2); 
+    end
+end
