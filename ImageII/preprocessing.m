@@ -15,23 +15,23 @@ for file_no=[12 36 37 38]
       mirror_horizontal = flip(cell ,2); 
       processed_no=processed_no+1;
       processed_cells(:,:,1,processed_no)=mirror_horizontal;
-      hor_rotate= imrotate(mirror_horizontal,90);
-      processed_no=processed_no+1;
-      processed_cells(:,:,1,processed_no)=hor_rotate;
+      %hor_rotate= imrotate(mirror_horizontal,90);
+      %processed_no=processed_no+1;
+      %processed_cells(:,:,1,processed_no)=hor_rotate;
       mirror_vertical = flip(cell ,1);
       processed_no=processed_no+1;
       processed_cells(:,:,1,processed_no)=mirror_vertical;
-      ver_rotate= imrotate(mirror_vertical,90);
-      processed_no=processed_no+1;
-      processed_cells(:,:,1,processed_no)=ver_rotate;
+%       ver_rotate= imrotate(mirror_vertical,90);
+%       processed_no=processed_no+1;
+%       processed_cells(:,:,1,processed_no)=ver_rotate;
       mirror_hor_ver = flip(mirror_vertical,2);
       processed_no=processed_no+1;
       processed_cells(:,:,1,processed_no)=mirror_hor_ver;
-      ver_hor_rotate= imrotate(mirror_hor_ver,90);
-      processed_no=processed_no+1;
-      processed_cells(:,:,1,processed_no)=ver_hor_rotate;
+%       ver_hor_rotate= imrotate(mirror_hor_ver,90);
+%       processed_no=processed_no+1;
+%       processed_cells(:,:,1,processed_no)=ver_hor_rotate;
     end
-    new_filename='Data/glassarg'+string(file_no)+".hdf5";
+    new_filename='Data/glassmir'+string(file_no)+".hdf5";
     if isfile(new_filename)
        delete(new_filename); 
     end
