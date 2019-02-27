@@ -25,7 +25,7 @@ function gc_example()
 
     % try to segment the image into k different regions
     % you can change this parameter and check the results
-    k = 2;
+    k = 3;
 
     % cluster the image colors into k regions
     data = ToVector(im);

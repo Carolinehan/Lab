@@ -32,7 +32,7 @@ function gc_task()
     k = 0;
     
     % background
-    cords = [10,10,20,20];
+    cords = [56,1355,452,1797];
     
     k = k+1;
     [idx,c] = addSrcSnk(im,idx,cords,k, 'background');
@@ -40,7 +40,7 @@ function gc_task()
     snkCords = [snkCords;cords];
     
     % foreground
-    cords = [60,30,70,110];
+    cords = [584,945,646,1049];
     k = k+1;
     [idx,c] = addSrcSnk(im,idx,cords,k, 'parrot');
     cen = [cen; c];
